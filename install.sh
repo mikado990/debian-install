@@ -30,7 +30,7 @@ nala install kde-plasma-desktop pipewire wireplumber -y
 # Installing KDE Programs
 nala install ark gwenview kate kde-spectacle okular plasma-pa plasma-nm -y
 # Installing Other less important Programs
-nala install steam gamemode mangohud vim  -y
+nala install steam-installer gamemode mangohud vim  -y
 # Installing fonts 
 nala install fonts-noto-color-emoji -y
 
