@@ -16,21 +16,18 @@ dpkg --add-architecture i386
 apt update
 apt upgrade -y
 
-# Install nala
-apt install nala -y
-
 # Installing Essential Programs 
-nala install kde-plasma-desktop pipewire wireplumber -y
+apt install kde-plasma-desktop sddm vim -y
 # Installing KDE Programs
-nala install ark gwenview kde-spectacle okular plasma-pa plasma-nm -y
+apt install ark gwenview okular -y
+# Installing Gaming programs
+apt install gamemode mangohud lutris wine64 wine32 libasound2-plugins:i386 libsdl2-2.0-0:i386 libdbus-1-3:i386 libsqlite3-0:i386 -y
 # Installing Other less important Programs
-nala install steam-installer gamemode mangohud neovim  -y
-# Installing fonts 
-nala install fonts-noto-color-emoji -y
-
-# Reloading Font
-fc-cache -vf
+apt install vlc tealdeer firefox-esr thunderbird qbittorrent -y
+# Installing Samba shares support
+apt install samba kdenetwork-filesharing -y
+# Installing flatpak support
+apt install flatpak kde-config-flatpak -y
 
 # Enable graphical login and change target from CLI to GUI
 systemctl enable sddm
-systemctl set-default graphical.target
